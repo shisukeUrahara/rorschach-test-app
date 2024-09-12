@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
 import './Quiz.css';
+import inkblot1 from '../assets/inkblot1.png';
+import inkblot2 from '../assets/inkblot2.png';
 
 const Quiz = ({ onQuizEnd }) => {
     const questions = [
-        // {
-        //     image: '/assets/inkblot1.png',
-        //     options: ['Butterfly', 'Face', 'Cloud'],
-        // },
-        // {
-        //     image: '/assets/inkblot2.png',
-        //     options: ['Animal', 'Person', 'Tree'],
-        // },
+        {
+            image: inkblot1,
+            options: ['Butterfly', 'Face', 'Cloud'],
+        },
+        {
+            image: inkblot2,
+            options: ['Animal', 'Person', 'Tree'],
+        },
     ];
 
     const [currentQuestion, setCurrentQuestion] = useState(0);
