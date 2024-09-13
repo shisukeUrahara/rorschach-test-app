@@ -11,12 +11,25 @@
   height: auto;
 }
 
+/* Light Mode Buttons */
+.light-theme .options button {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #333;
+}
+
+/* Dark Mode Buttons */
+.dark-theme .options button {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
 .options button {
   margin: 10px;
   padding: 10px 20px;
   border-radius: 5px;
   font-size: 18px;
-  background-color: #f8f8f8;
   transition: background-color 0.2s ease;
 }
 
