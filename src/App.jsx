@@ -7,10 +7,10 @@ import './App.css';
 
 const App = () => {
   const [answers, setAnswers] = useState([]);
-  const [darkTheme, setDarkTheme] = useState(true);
+  const [darkTheme, setDarkTheme] = useState(true); // Set default to dark theme
 
   const handleQuizEnd = (userAnswers) => {
-    setAnswers(userAnswers);
+    setAnswers(userAnswers); // Store answers for result analysis
   };
 
   // Toggle the theme state

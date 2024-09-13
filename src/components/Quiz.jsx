@@ -2,8 +2,12 @@ import React, { useState } from 'react';
 import './Quiz.css';
 import inkblot1 from '../assets/inkblot1.png';
 import inkblot2 from '../assets/inkblot2.png';
+import { useNavigate } from 'react-router-dom';
+
 
 const Quiz = ({ onQuizEnd }) => {
+    const navigate = useNavigate();
+
     const questions = [
         {
             image: inkblot1,
@@ -19,11 +23,18 @@ const Quiz = ({ onQuizEnd }) => {
     const [answers, setAnswers] = useState([]);
 
     const handleAnswer = (answer) => {
-        setAnswers([...answers, answer]);
+        const newAnswers = [...answers, answer];
+        setAnswers(newAnswers);
+
+        // If the quiz is complete, send the answers and navigate to the result page
         if (currentQuestion < questions.length - 1) {
             setCurrentQuestion(currentQuestion + 1);
         } else {
-            onQuizEnd(answers);
+            // Call onQuizEnd to pass answers to the parent component
+            onQuizEnd(newAnswers);
+
+            // Navigate to the result page
+            navigate('/result');
         }
     };
 

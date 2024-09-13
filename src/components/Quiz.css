@@ -2,27 +2,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   height: 100vh;
 }
 
 .quiz-container img {
+  margin-top: 20px;
   max-width: 500px;
   height: auto;
 }
 
-/* Light Mode Buttons */
-.light-theme .options button {
-  background-color: #fff;
-  color: #333;
-  border: 1px solid #333;
-}
-
-/* Dark Mode Buttons */
-.dark-theme .options button {
-  background-color: #333;
-  color: #fff;
-  border: 1px solid #fff;
+.options {
+  margin-top: 20px;
 }
 
 .options button {
@@ -31,8 +22,4 @@
   border-radius: 5px;
   font-size: 18px;
   transition: background-color 0.2s ease;
-}
-
-.options button:hover {
-  background-color: #e0e0e0;
 }
