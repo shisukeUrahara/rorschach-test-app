@@ -5,6 +5,7 @@ const Result = ({ answers }) => {
     const analyzeAnswers = () => {
         let result = '';
 
+
         if (answers.includes('Butterfly')) {
             result = 'You are creative and imaginative!';
         }
